@@ -10,14 +10,14 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/main.css" />
     <title>Cuevana | Home</title>
   </head>
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="index.html">
             <img src="./img//Cuevalogo-logo.png" alt="Cuevana Logo" />
           </a>
           <button
@@ -37,28 +37,33 @@
                 <a
                   class="nav-link active custom_nav"
                   aria-current="page"
-                  href="#"
+                  href="index.html"
                   >Inicio</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link custom_nav" href="#">Series</a>
+                <a class="nav-link custom_nav" href="index.html#romanceList"
+                  >Romance</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link custom_nav" href="#">Películas</a>
+                <a class="nav-link custom_nav" href="index.html#comedyList"
+                  >Comedia</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link custom_nav" href="#"
-                  >Estrenos de películas</a
+                <a class="nav-link custom_nav" href="index.html#fantasyList"
+                  >Fantasía</a
                 >
               </li>
             </ul>
-            <form class="d-flex">
+            <form class="d-flex" id="search">
               <input
                 class="form-control me-2"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
+                id="searchField"
               />
               <button class="btn btn-outline-success" type="submit">
                 Search
@@ -71,10 +76,87 @@
     <main>
       <div class="container-fluid">
         <div class="row">
-          <div class="col-lg-3 movies_sidebar">
+          <div
+            class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3 movies_sidebar mobile__hidden"
+          >
             <h3 class="sidebar_title">Géneros</h3>
-            <ul>
-              <li>Acción</li>
+            <ul class="sidebar_list">
+              <li>
+                <a href="index.html">
+                  <span
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="icon icon-tag"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z"
+                        clip-rule="evenodd"
+                      ></path></svg></span
+                  >Inicio</a
+                >
+              </li>
+              <li>
+                <a href="index.html#romanceList">
+                  <span
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="icon icon-tag"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z"
+                        clip-rule="evenodd"
+                      ></path></svg></span
+                  >Romance</a
+                >
+              </li>
+              <li>
+                <a href="index.html#comedyList">
+                  <span
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="icon icon-tag"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z"
+                        clip-rule="evenodd"
+                      ></path></svg></span
+                  >Comedia</a
+                >
+              </li>
+              <li>
+                <a href="index.html#fantasyList">
+                  <span
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="icon icon-tag"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z"
+                        clip-rule="evenodd"
+                      ></path></svg></span
+                  >Fantasy</a
+                >
+              </li>
             </ul>
             <img
               src="./img/Cuevalogo-logo.png"
@@ -82,38 +164,24 @@
               alt="Cuevana Logo"
             />
           </div>
-          <div class="col-lg-9 movies_container">
+          <div
+            class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 col-xxl-9 movies_container"
+          >
             <div class="container mt-5">
-              <h2>Estrenos</h2>
-              <div class="row mt-4">
-                <div class="col">
-                  <img src="./img/movie1.jpg" alt="" />
-                </div>
-              </div>
+              <h2>Populares</h2>
+              <div class="row mt-4" id="popularList"></div>
             </div>
             <div class="container mt-5">
               <h2>Romance</h2>
-              <div class="row mt-4">
-                <div class="col">
-                  <img src="./img/movie1.jpg" alt="" />
-                </div>
-              </div>
+              <div class="row mt-4" id="romanceList"></div>
             </div>
             <div class="container mt-5">
-              <h2>Acción</h2>
-              <div class="row mt-4">
-                <div class="col">
-                  <img src="./img/movie1.jpg" alt="" />
-                </div>
-              </div>
+              <h2>Comedia</h2>
+              <div class="row mt-4" id="comedyList"></div>
             </div>
             <div class="container mt-5">
-              <h2>Terror</h2>
-              <div class="row mt-4">
-                <div class="col">
-                  <img src="./img/movie1.jpg" alt="" />
-                </div>
-              </div>
+              <h2>Fantasía</h2>
+              <div class="row mt-4" id="fantasyList"></div>
             </div>
             <footer class="container-fluid footer_container mt-5">
               <div class="row">
@@ -134,6 +202,6 @@
       </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="./js/app.js"></script>
   </body>
 </html>
